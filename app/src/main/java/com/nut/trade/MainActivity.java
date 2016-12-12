@@ -1,4 +1,4 @@
-package com.nut.trade;
+﻿package com.nut.trade;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -51,8 +51,8 @@ public class MainActivity extends Activity {
     private List<UserModel> readUser;
     private  String sortfrist = "sale",sortsecound = "asc";
     private AdView adView;
-    private LinearLayout layoutmain_bottom;
-
+    private LinearLayout layoutmain_bottom; 
+//Testtt
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
