@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">บันทึกขายของ</string>
+    <string name="action_settings">Settings</string>
+    <string name="Home">หน้าหลัก</string>
+    <string name="history">ประวัติ</string>
+    <string name="item">สินค้า</string>
+    <string name="banner_ad_unit_id">ca-app-pub-7928623787894953/7044841628</string>
+
+</resources>

@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.nut.trade" >
+
+     <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+         android:icon="@drawable/home"
+        android:title="@string/action_settings"/>
+    
+    
+
+</menu>

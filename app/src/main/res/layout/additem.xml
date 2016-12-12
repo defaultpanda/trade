@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:background="@android:color/background_light">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="รายการสินค้า"
+                        android:id="@+id/txttitle"
+                        android:textSize="16dp"
+                        android:textColor="@android:color/holo_blue_dark" />
+
+                    <EditText
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edttitle"
+                        android:layout_width="120dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="รายละเอียดสินค้า"
+                        android:id="@+id/txtdes"
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edtdes"
+                        android:layout_width="120dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="สถานที่"
+                        android:id="@+id/textView20"
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edtlocation"
+                        android:layout_width="120dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ราคาขาย"
+                            android:id="@+id/textView2"
+                            android:textColor="#ff0000" />
+
+                        <EditText
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/edtsale"
+                            android:layout_marginLeft="3dp"
+                            android:inputType="number"
+                            android:gravity="right|center_vertical" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="บาท"
+                            android:id="@+id/textView6" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ต้นทุน"
+                            android:id="@+id/textView3"
+                            android:textColor="#009933" />
+
+                        <EditText
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/edtcost"
+                            android:layout_marginLeft="20dp"
+                            android:inputType="number"
+                            android:gravity="right|center_vertical" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="บาท"
+                            android:id="@+id/textView7" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ลดราคา"
+                            android:id="@+id/textView4" />
+
+                        <EditText
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/edtdiscount"
+                            android:layout_marginLeft="10dp"
+                            android:inputType="number"
+                            android:hint="0-100"
+                            android:text="0"
+                            android:gravity="right|center_vertical" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="%"
+                            android:id="@+id/textView5" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_height="match_parent"
+                                android:id="@+id/imgtrade"
+                                android:layout_width="match_parent"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:src="@android:drawable/ic_menu_report_image" />
+
+                            <ImageButton
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:id="@+id/imgbtndel"
+                                android:visibility="gone"
+                                android:background="@drawable/remove"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom|right"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:layout_width="37dp"
+                            android:layout_height="40dp"
+                            android:id="@+id/imgbtnclear"
+                            android:background="@drawable/clear"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_gravity="bottom|left" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:layout_width="37dp"
+                                android:layout_height="40dp"
+                                android:id="@+id/imgbtnedit"
+                                android:background="@drawable/edit"
+                                android:layout_alignParentBottom="true"
+
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true"
+                                android:visibility="gone"
+                                android:layout_gravity="bottom"
+                                android:layout_weight="1" />
+
+                            <ImageButton
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:id="@+id/imgbtnconfirm"
+                                android:background="@drawable/confirm"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="bottom|right" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="เรียง"
+            android:id="@+id/textView8" />
+
+        <Spinner
+            android:layout_height="35dp"
+            android:id="@+id/spinsortadd"
+            android:layout_width="110dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="รายการ"
+            android:id="@+id/textView11"
+            android:layout_marginLeft="10dp" />
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtsearch" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="ค้นหา"
+            android:id="@+id/btnsearch" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listviewitem" />
+    </LinearLayout>
+</LinearLayout>
