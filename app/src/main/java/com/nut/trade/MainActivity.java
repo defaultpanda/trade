@@ -51,8 +51,13 @@ public class MainActivity extends Activity {
     private List<UserModel> readUser;
     private  String sortfrist = "sale",sortsecound = "asc";
     private AdView adView;
+<<<<<<< HEAD
     private LinearLayout layoutmain_bottom; 
 //Testtt
+=======
+    private LinearLayout layoutmain_bottom;
+	//Test
+>>>>>>> create_new_page
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
