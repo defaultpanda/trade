@@ -74,7 +74,7 @@ public class itemactivity extends Activity{
     public Bitmap bitmap;
     public String encodedString;
     public boolean checkinputimage = false;
-
+    private LinearLayout layouttopadditem;
 
 
     @Override
@@ -102,21 +102,21 @@ public class itemactivity extends Activity{
                 if(spinsortadd.getSelectedItemPosition() == 0)
                 {
                     sortadd = "id";
-                    Log.d("llll",sortadd);
+                 //   Log.d("llll",sortadd);
                     getUserspin(sortadd);
 
                 }
                 if(spinsortadd.getSelectedItemPosition() == 1)
                 {
                     sortadd = "sale";
-                    Log.d("llll",sortadd);
+                 //   Log.d("llll",sortadd);
                     getUserspin(sortadd);
 
                 }
                 if(spinsortadd.getSelectedItemPosition() == 2)
                 {
                     sortadd = "cost";
-                    Log.d("llll",sortadd);
+                //    Log.d("llll",sortadd);
                     getUserspin(sortadd);
                 }
             }
@@ -372,7 +372,7 @@ public class itemactivity extends Activity{
 
                 Log.d("Testtt",model.getcost());
 
-
+                layouttopadditem.setVisibility(View.VISIBLE);
              /*   listUser.add(model);*/
 
             }while (cursor.moveToNext());
@@ -381,6 +381,7 @@ public class itemactivity extends Activity{
         }
         db.close();
         cursor.close();
+
 
         itemadapter adapter = new itemadapter(itemactivity.this, R.id.text,listid,listtitle
                 ,listdes,listlocation, listsale
@@ -457,7 +458,7 @@ public class itemactivity extends Activity{
         }
         db.close();
         cursor.close();
-
+        layouttopadditem.setVisibility(View.VISIBLE);
         itemadapter adapter = new itemadapter(itemactivity.this, R.id.text,listid,listtitle
                 ,listdes,listlocation, listsale
                 ,listcost,listdiscount,listimage);
@@ -568,6 +569,7 @@ public class itemactivity extends Activity{
         btnremoveimg = (ImageButton) findViewById(R.id.imgbtndel);
         spinsortadd = (Spinner) findViewById(R.id.spinsortadd);
         listView = (ListView) findViewById(R.id.listviewitem);
+        layouttopadditem = (LinearLayout) findViewById(R.id.layouttopadditem);
 
 
     }

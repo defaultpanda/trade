@@ -1,4 +1,4 @@
-﻿package com.nut.trade;
+package com.nut.trade;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -51,8 +51,8 @@ public class MainActivity extends Activity {
     private List<UserModel> readUser;
     private  String sortfrist = "sale",sortsecound = "asc";
     private AdView adView;
-    private LinearLayout layoutmain_bottom;
-	
+    private LinearLayout layoutmain_bottom,layouttopmain;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +61,7 @@ public class MainActivity extends Activity {
         setTheme(R.style.AppTheme);
 
         bindview();
+        clearvalue();
         eventshowbutton();
         addlistspinfrist();
         addlistspinsecound();
@@ -69,13 +70,19 @@ public class MainActivity extends Activity {
 
     }
 
+    private void clearvalue() {
+        mainitem.listitem.clear();
+    }
+
     private void eventshowbutton() {
         txtshowmain.setVisibility(View.VISIBLE);
+
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        clearvalue();
         getlist();
     }
 
@@ -155,6 +162,7 @@ public class MainActivity extends Activity {
             db.close();
             cursor.close();
             layoutmain_bottom.setVisibility(View.VISIBLE);
+            layouttopmain.setVisibility(View.VISIBLE);
             final mainadapter adapter = new mainadapter(MainActivity.this, R.id.text,listid,listtitle
                     ,listdes,listlocation, listsale
                     ,listcost,listdiscount,listimage);
@@ -238,6 +246,7 @@ public class MainActivity extends Activity {
             db.close();
             cursor.close();
 
+            layouttopmain.setVisibility(View.VISIBLE);
             layoutmain_bottom.setVisibility(View.VISIBLE);
             final mainadapter adapter = new mainadapter(MainActivity.this, R.id.text,listid,listtitle
                     ,listdes,listlocation, listsale
@@ -266,6 +275,9 @@ public class MainActivity extends Activity {
         txtshowmain = (TextView) findViewById(R.id.txtshowmain);
         adView = (AdView)findViewById(R.id.adView);
         layoutmain_bottom = (LinearLayout) findViewById(R.id.layoutmain_bottom);
+        layouttopmain = (LinearLayout) findViewById(R.id.layouttopmain);
+
+
 
     }
 
